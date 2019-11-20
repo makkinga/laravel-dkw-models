@@ -13,8 +13,8 @@ class DkwModelsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('dkw', function ($app) {
-            return new DkwModelsController($app);
+        $this->app->singleton('dkw', function () {
+            return new DkwModelsController();
         });
     }
 
