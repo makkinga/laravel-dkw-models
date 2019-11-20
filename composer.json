@@ -11,6 +11,9 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
+        "psr-4": {
+            "Makkinga\\DkwModels\\": "src/"
+        },
         "files": [
             "src/helpers.php"
         ]
