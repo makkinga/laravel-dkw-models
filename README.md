@@ -24,6 +24,9 @@ dkw()->getModelAdditions('car')
 dkw()->getModelAdditions('motorcycle')
 dkw()->getModelAdditions('moped')
 dkw()->getModelAdditions('misc')
+
+dkw()->getAllModels()
+dkw()->getAllModelAdditions()
 ```
 
 ## Licence
