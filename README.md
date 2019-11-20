@@ -10,7 +10,7 @@ composer require makkinga/laravel-dkw-models
 
 ## Usage
 
-This package gives you the global helper function `dkw()` containing all model names and model name additions:
+This package gives you the global helper function `dkw()` containing all model names and model name additions.
 
 Optionally you can get a specific array using one of these methods:
 
