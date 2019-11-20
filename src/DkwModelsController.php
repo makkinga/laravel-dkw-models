@@ -4,7 +4,6 @@ namespace Makkinga\DkwModels;
 
 class DkwModelsController
 {
-
     protected $carModels;
     protected $carModelAdditions;
     protected $mopedModels;
@@ -36,7 +35,25 @@ class DkwModelsController
      */
     public function getModels($vehicleType)
     {
-        return $this->getData($vehicleType, 'ModelAdditions');
+        return $this->getData($vehicleType, 'Models');
+    }
+
+    /**
+     * @return bool
+     * @throws \ErrorException
+     */
+    public function getAllModels()
+    {
+        $models = array_merge(
+            $this->getModels('car'),
+            $this->getModels('motorcycle'),
+            $this->getModels('moped'),
+            $this->getModels('misc')
+        );
+
+        sort($models);
+
+        return $models;
     }
 
     /**
@@ -47,6 +64,23 @@ class DkwModelsController
     public function getModelAdditions($vehicleType)
     {
         return $this->getData($vehicleType, 'ModelAdditions');
+    }
+
+    /**
+     * @return bool
+     * @throws \ErrorException
+     */
+    public function getAllModelAdditions()
+    {
+        $modelAdditions = array_merge(
+            $this->getModelAdditions('car'),
+            $this->getModelAdditions('motorcycle'),
+            $this->getModelAdditions('moped')
+        );
+
+        sort($modelAdditions);
+
+        return $modelAdditions;
     }
 
     /**
